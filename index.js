@@ -54,10 +54,6 @@ function print_matrix(matrix) {
        if (i < matrix.length-1) {
            string = string += "\n"
        }
-
-
    }
    console.log(string)
 }
-print_matrix(identity_matrix(8))
-
