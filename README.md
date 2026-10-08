@@ -53,3 +53,12 @@ In general:
 ```text
 (a × b) × (b × c) = (a × c)
 ```
+
+## `transpose(matrix)`
+Transposes the matrix, which means to swap the rows and columns of the matrix
+
+## `print_matrix(matrix)`
+Logs the matrix into a readable format into the console
+
+
+
