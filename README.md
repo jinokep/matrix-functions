@@ -57,6 +57,18 @@ In general:
 ## `transpose(matrix)`
 Transposes the matrix, which means to swap the rows and columns of the matrix
 
+## `add_matrix(matrix1,matrix2)`
+Adds two matrices together, but they have to be same dimensions or else the operation will be invalid
+
+- [1,3] + [4,6] will equal [5,9]
+- [5,4,4] + [3,4,4] will equal [8,8,8]
+
+## `subtract_matrix(matrix1,matrix2)`
+Subtracts two matrices together, but they have to be same dimensions or else the operation will be invalid
+
+- [5,4] - [3,2] = [2,2]
+- [8,4,2] - [4,2,1] = [4,2,1]
+
 ## `print_matrix(matrix)`
 Logs the matrix into a readable format into the console
 
