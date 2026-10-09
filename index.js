@@ -1,8 +1,8 @@
 //to create a matrix, create a 2d array and it will be defined as [row][column]
 //e.g : matrix = [
- [3,4],
- [5,2]
-]
+// [3,4],
+// [5,2]
+//]
 function construct_matrix(rows,columns) {
     var matrix = []
     for (var row = 0; row < rows; row++) {
@@ -54,7 +54,51 @@ function transpose_matrix(matrix) {
     }
     return new_matrix
 }
+function add_matrix(a,b) {
+    var rows_a = a.length
+    var rows_b = b.length
+    var columns_a = a[0].length
+    var columns_b = b[0].length
 
+    if (rows_a != rows_b && columns_a != columns_b) {
+        console.log("Cannot add matrices")
+    }
+    var new_matrix = construct_matrix(rows_a,columns_a)
+    for (var row = 0; row < rows_a; row++) {
+        for (var column = 0; column < columns_a; column++) {
+            new_matrix[row][column] = a[row][column] + b[row][column]
+        }
+    }
+    return new_matrix
+}
+function subtract_matrix(a,b) {
+    var rows_a = a.length
+    var rows_b = b.length
+    var columns_a = a[0].length
+    var columns_b = b[0].length
+
+    if (rows_a != rows_b && columns_a != columns_b) {
+        console.log("Cannot add matrices")
+    }
+    var new_matrix = construct_matrix(rows_a,columns_a)
+    for (var row = 0; row < rows_a; row++) {
+        for (var column = 0; column < columns_a; column++) {
+            new_matrix[row][column] = a[row][column] - b[row][column]
+        }
+    }
+    return new_matrix
+}
+function scale_matrix(matrix,scalar) {
+    var new_matrix = matrix
+    var rows = matrix.length
+    var columns = matrix[0].length
+    for (var row = 0; row < rows; row++) {
+        for (var column = 0; column < columns; column++) {
+            new_matrix[row][column] = new_matrix[row][column]*scalar
+        }
+    }
+    return new_matrix
+}
 function print_matrix(matrix) {
    var string = ""
    for (var i = 0; i < matrix.length; i++) {
@@ -69,5 +113,3 @@ function print_matrix(matrix) {
    }
    console.log(string)
 }
-
-print_matrix(identity_matrix(5))
